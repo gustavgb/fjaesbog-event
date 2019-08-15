@@ -7,9 +7,11 @@ const Container = styled.div`
   grid-column: 3 / 4;
   overflow: hidden;
   min-height: 90vh;
+  font-size: 10px;
 
   @media (max-width: ${props => props.theme.breakpoints.md}) {
     grid-column: 2 / 5;
+    font-size: 12px;
   }
 `
 
@@ -27,15 +29,15 @@ const DateWrapper = styled.div`
 
 const DateMonth = styled.div`
   color: ${props => props.theme.palette.red};
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 1.2em;
+  line-height: 1em;
   margin-bottom: 4px;
 `
 
 const DateDay = styled.div`
   font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 2.4em;
+  line-height: 1.16em;
   color: #1d2129;
 `
 
@@ -45,17 +47,17 @@ const HeaderWrapper = styled.div`
 `
 
 const Header = styled.h1`
-  font-size: 20px;
+  font-size: 2em;
   color: #1d2129;
   margin: 0;
   font-weight: normal;
-  line-height: 28px;
+  line-height: 1.4em;
 `
 
 const SubHeader = styled.p`
-  font-size: 14px;
+  font-size: 1.4em;
   color: #90949c;
-  line-height: 18px;
+  line-height: 1.4em;
   margin: 0;
 `
 const InfoContainer = styled.div`
@@ -98,7 +100,7 @@ const Time = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   color: #4b4f56;
-  font-size: 14px;
+  font-size: 1.4em;
   padding: 16px 0 14px 14px;
 `
 
@@ -109,13 +111,13 @@ const Location = styled.div`
 
   & > div:nth-child(1) {
     color: #4b4f56;
-    font-size: 14px;
+    font-size: 1.4em;
     margin-bottom: 5px;
   }
 
   & > div:nth-child(2) {
     color: #90949c;
-    font-size: 12px;
+    font-size: 1.2em;
     white-space: nowrap;
   }
 `
@@ -128,7 +130,7 @@ const MapLink = styled.a.attrs({
   grid-row: 2;
   align-self: center;
   justify-self: end;
-  font-size: 12px;
+  font-size: 1.2em;
   white-space: nowrap;
   padding-right: 12px;
   text-decoration: none;
@@ -150,23 +152,27 @@ const BlockTitle = styled.div`
   padding: 16px 12px;
   border-bottom: 1px solid #dadde1;
   color: #1d2129;
-  line-height: 18px;
-  font-size: 14px;
+  line-height: 1.4em;
+  font-size: 1.4em;
   font-weight: 600;
 `
 
 const BlockBody = styled.div`
   padding: 16px 12px;
   color: #1d2129;
-  line-height: 18px;
-  font-size: 14px;
+  line-height: 1.4em;
+  font-size: 1.4em;
+
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    font-size: 1.8em;
+  }
 `
 
 const Chip = styled.span`
   padding: 5px;
   color: ${props => props.theme.palette.chipText};
   background-color: ${props => props.theme.palette.chipBg};
-  font-size: 12px;
+  font-size: 1.2em;
   display: inline-block;
   margin: 12px 5px 12px 0;
 
