@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Icon from './Icon'
 import profilePic from '../images/profile.jpg'
 
@@ -10,15 +10,23 @@ const Root = styled.div`
   background-color: ${props => props.theme.palette.primary};
   display: grid;
   grid-template-columns: 1fr 1012px 1fr;
+
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    grid-template-columns: 0 100% 0;
+  }
 `
 
 const Container = styled.div`
   padding: 8px;
-  grid-column: 2;
+  grid-column: 2 / 3;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    grid-column: 1 / -1;
+  }
 `
 
 const SearchBarWrapper = styled.div`
@@ -56,6 +64,10 @@ const SearchButton = styled.button`
 `
 
 const MenuItem = styled.div`
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    display: none;
+  }
+
   cursor: pointer;
   border-radius: 2px;
   outline: none;
@@ -94,6 +106,12 @@ const IconButton = styled.div`
   &:hover {
     opacity: 1;
   }
+
+  ${props => props.hideOnMobile && css`
+    @media (max-width: ${props => props.theme.breakpoints.md}) {
+      display: none;
+    }
+  `}
 `
 
 const Top = () => (
@@ -116,8 +134,8 @@ const Top = () => (
       <IconButton><Icon glyph="people" /></IconButton>
       <IconButton><Icon glyph="messages" /></IconButton>
       <IconButton divider><Icon glyph="notifications" /></IconButton>
-      <IconButton noPadding><Icon glyph="help" /></IconButton>
-      <IconButton><Icon glyph="settings" /></IconButton>
+      <IconButton noPadding hideOnMobile><Icon glyph="help" /></IconButton>
+      <IconButton hideOnMobile><Icon glyph="settings" /></IconButton>
     </Container>
   </Root>
 )

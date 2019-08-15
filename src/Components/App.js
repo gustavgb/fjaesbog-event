@@ -9,6 +9,10 @@ const Root = styled.div`
   grid-gap: 16px;
   grid-template-columns: 1fr 256px 500px 256px 1fr;
   padding-bottom: 10px;
+
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    grid-template-columns: 0 0 100% 0 0;
+  }
 `
 
 export default () => {

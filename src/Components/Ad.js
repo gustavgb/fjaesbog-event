@@ -4,6 +4,10 @@ import ad from '../images/ad.jpeg'
 import metoo from '../images/metoo.jpg'
 
 const Container = styled.div`
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    display: none;
+  }
+
   grid-column: 4 / 5;
   overflow: hidden;
   position: relative;

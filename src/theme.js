@@ -12,6 +12,6 @@ export default {
     buttonText: '#4b4f56'
   },
   breakpoints: {
-    md: '1000px'
+    md: '1080px'
   }
 }

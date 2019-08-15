@@ -7,6 +7,10 @@ const Container = styled.div`
   grid-column: 3 / 4;
   overflow: hidden;
   min-height: 90vh;
+
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    grid-column: 2 / 5;
+  }
 `
 
 const Img = styled.img`
