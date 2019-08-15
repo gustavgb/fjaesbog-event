@@ -4,7 +4,7 @@ import Icon from './Icon'
 import profilePic from '../images/profile.jpg'
 
 const Root = styled.div`
-  width: 100%;
+  grid-column: 1 / -1;
   height: 42px;
   border-bottom: 1px solid ${props => props.theme.palette.border};
   background-color: ${props => props.theme.palette.primary};
