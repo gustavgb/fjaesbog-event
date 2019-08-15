@@ -9,7 +9,7 @@ const Root = styled.div`
   border-bottom: 1px solid ${props => props.theme.palette.border};
   background-color: ${props => props.theme.palette.primary};
   display: grid;
-  grid-template-columns: 1fr ${props => props.theme.breakpoints.md} 1fr;
+  grid-template-columns: 1fr 1012px 1fr;
 `
 
 const Container = styled.div`

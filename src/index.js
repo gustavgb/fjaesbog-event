@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: Helvetica;
   }
+
+  body {
+    background-color: #e9ebee;
+  }
 `
 
 ReactDOM.render(
