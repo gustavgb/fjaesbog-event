@@ -22,8 +22,6 @@ const Container = styled.div`
 `
 
 const SearchBarWrapper = styled.div`
-  border-radius: 3px;
-  overflow: hidden;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -46,7 +44,7 @@ const SearchBar = styled.input.attrs({
 const SearchButton = styled.button`
   color: ${props => props.theme.palette.buttonText};
   background-color: ${props => props.theme.palette.buttonBg};
-  padding: 3px 20px;
+  padding: 3px 16px;
   opacity: 1;
   transition: opacity .2s linear;
   display: inline;
@@ -110,7 +108,7 @@ const Top = () => (
       </SearchBarWrapper>
       <MenuItem divider>
         <img src={profilePic} alt="profile" />
-        Zuck
+        Mark
       </MenuItem>
       <MenuItem divider>Shit feed</MenuItem>
       <MenuItem divider>Køb venner</MenuItem>

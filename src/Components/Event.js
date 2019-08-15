@@ -17,6 +17,7 @@ const Container = styled.div`
 
 const Img = styled.img`
   width: 100%;
+  margin: 0 1px -5px;
 `
 
 const DateWrapper = styled.div`
@@ -63,6 +64,8 @@ const InfoContainer = styled.div`
   background-color: white;
   padding: 10px;
   border-radius: 0 3px 3px 0;
+  border: 1px solid #dddfe2;
+  margin: 0;
 `
 
 const Details = styled.div`
