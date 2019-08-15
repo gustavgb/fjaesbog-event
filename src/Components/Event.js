@@ -62,7 +62,7 @@ const SubHeader = styled.p`
 `
 const InfoContainer = styled.div`
   background-color: white;
-  padding: 10px;
+  padding: 20px 0;
   border-radius: 0 3px 3px 0;
   border: 1px solid #dddfe2;
   margin: 0;
@@ -121,6 +121,29 @@ const Location = styled.div`
   }
 `
 
+const Block = styled.div`
+  margin: 12px 0;
+  background-color: #fff;
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+`
+
+const BlockTitle = styled.div`
+  padding: 16px 12px;
+  border-bottom: 1px solid #dadde1;
+  color: #1d2129;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 600;
+`
+
+const BlockBody = styled.div`
+  padding: 16px 12px;
+  color: #1d2129;
+  line-height: 18px;
+  font-size: 14px;
+`
+
 const Event = () => (
   <Root>
     <Container>
@@ -147,6 +170,12 @@ const Event = () => (
           </Location>
         </Details>
       </InfoContainer>
+      <Block>
+        <BlockTitle>Detaljer</BlockTitle>
+        <BlockBody>
+          Hej allesammen!
+        </BlockBody>
+      </Block>
     </Container>
   </Root>
 )
