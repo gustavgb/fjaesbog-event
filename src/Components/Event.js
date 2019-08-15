@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import eventImage from '../images/event.jpg'
 import Icon from './Icon'
+import content from '../content'
 
 const Container = styled.div`
   grid-column: 3 / 4;
@@ -190,34 +191,32 @@ const Event = () => (
     <Img src={eventImage} />
     <InfoContainer>
       <DateWrapper>
-        <DateMonth>AUG.</DateMonth>
-        <DateDay>25.</DateDay>
+        <DateMonth>{content.month}</DateMonth>
+        <DateDay>{content.day}</DateDay>
       </DateWrapper>
       <HeaderWrapper>
-        <Header>Gustavs børnefødselsdag</Header>
+        <Header>{content.eventName}</Header>
         <SubHeader>Privat &#x2027; Organiseret af Gustav Burchardt</SubHeader>
       </HeaderWrapper>
       <Line />
       <Details>
         <Icon glyph="clock" size="16px" />
         <Icon glyph="location" size="16px" />
-        <Time>
-          25. aug. 2019 kl. 12.00
-        </Time>
+        <Time>{content.date}</Time>
         <Location>
-          <div>Gustavs lejlighed</div>
-          <div>Maglemosevej 11, 1. tv. 2900 Hellerup</div>
+          <div>{content.locationName}</div>
+          <div>{content.locationAddress}</div>
         </Location>
         <MapLink>Vis kort</MapLink>
       </Details>
     </InfoContainer>
     <Block>
       <BlockTitle>Detaljer</BlockTitle>
-      <BlockBody>
-        Hej allesammen!
-      </BlockBody>
+      <BlockBody dangerouslySetInnerHTML={{ __html: content.description }} />
       <div>
-        <Chip>Børnevenlig</Chip>
+        {content.tags.map(tag => (
+          <Chip key={tag}>{tag}</Chip>
+        ))}
       </div>
     </Block>
   </Container>
