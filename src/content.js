@@ -1,4 +1,5 @@
 export default {
+  documentTitle: 'Børnefødselsdag - Fjæsbog',
   month: 'AUG.',
   day: '25.',
   eventName: 'Gustavs børnefødselsdag',

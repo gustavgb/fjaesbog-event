@@ -4,6 +4,11 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import 'normalize.css'
 import theme from './theme'
 import App from './Components/App'
+import content from './content'
+
+window.addEventListener('load', () => {
+  document.title = content.documentTitle
+})
 
 const GlobalStyle = createGlobalStyle`
   * {
