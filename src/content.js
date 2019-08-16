@@ -1,9 +1,9 @@
 export default {
   documentTitle: 'Børnefødselsdag - Fjæsbog',
-  month: 'AUG.',
-  day: '25.',
+  month: 'SEP.',
+  day: '1.',
   eventName: 'Gustavs børnefødselsdag',
-  date: '25. aug. 2019 kl. 12.00',
+  date: '1. sep. 2019 kl. 12.00',
   locationName: 'Gustavs lejlighed',
   locationAddress: 'Maglemosevej 11, 1. tv. 2900 Hellerup',
   description: `
