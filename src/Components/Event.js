@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import eventImage from '../images/event.jpg'
 import Icon from './Icon'
+import Multiline from './Multiline'
 import content from '../content'
 
 const Container = styled.div`
@@ -212,7 +213,9 @@ const Event = () => (
     </InfoContainer>
     <Block>
       <BlockTitle>Detaljer</BlockTitle>
-      <BlockBody dangerouslySetInnerHTML={{ __html: content.description }} />
+      <BlockBody>
+        <Multiline>{content.description}</Multiline>
+      </BlockBody>
       <div>
         {content.tags.map(tag => (
           <Chip key={tag}>{tag}</Chip>
